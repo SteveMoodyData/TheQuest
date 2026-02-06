@@ -12,7 +12,7 @@ from datetime import datetime
 api_url = "https://honolulu-api.datausa.io/tesseract/data.jsonrecords?cube=acs_yg_total_population_1&drilldowns=Year%2CNation&locale=en&measures=Population"
 
 # Volume path 
-volume_path = "/Volumes/thequest/bronze/datausa_io"
+volume_path = "/Volumes/thequest/main/datausa_io"
 
 # COMMAND ----------
 

@@ -1,6 +1,6 @@
 # Databricks notebook source
 # MAGIC %md
-# MAGIC # Auto Loader: Each BLS File to Separate Table
+# MAGIC # Auto Loader: Each BLS File to Bronze Table
 
 # COMMAND ----------
 
@@ -9,7 +9,7 @@ from pyspark.sql.functions import *
 # Configuration
 source_path = "s3://steve-m-bls-demo-bucket/bls/pr/"
 checkpoint_path = "s3://steve-m-bls-demo-bucket/checkpoints/bls_current/"
-target_table = "thequest.bronze.bls_pr_data_current"
+target_table = "thequest.main.bronze_bls_pr_data_current"
 
 
 # COMMAND ----------
