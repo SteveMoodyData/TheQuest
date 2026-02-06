@@ -1,6 +1,6 @@
 # The Quest - Databricks Data Engineering Pipeline
 
-A modern data engineering solution to the [Rearc Data Quest](https://github.com/rearc-data/quest) challenge, implemented using **Databricks**, **Delta Lake**, and **AWS S3** instead of traditional AWS Lambda/SQS architecture.
+A modern data engineering solution to the Rearc Data Quest challenge, implemented using **Databricks**, **Delta Lake**, and **AWS S3** instead of traditional AWS Lambda/SQS architecture.
 
 ## 📋 Table of Contents
 
@@ -723,7 +723,6 @@ def silver():
 
 - [BLS Productivity Data](https://www.bls.gov/lpc/)
 - [Data USA API Documentation](https://datausa.io/about/api/)
-- [Rearc Data Quest](https://github.com/rearc-data/quest)
 
 ### Best Practices
 
@@ -746,7 +745,7 @@ Portland, Oregon
 
 - GitHub: [@SteveMoodyData](https://github.com/SteveMoodyData)
 - LinkedIn: [Steve Moody](https://www.linkedin.com/in/your-profile)
-- Email: steve.moody@example.com
+- Email: steve.moody@gmail.com
 
 ### Skills Demonstrated
 
@@ -763,41 +762,12 @@ Portland, Oregon
 
 ## 🙏 Acknowledgments
 
-- **[Rearc](https://www.rearc.io/)** for creating the challenging and educational Data Quest
 - **[Bureau of Labor Statistics](https://www.bls.gov/)** for providing high-quality, publicly available economic data
 - **[Data USA](https://datausa.io/)** for the excellent population data API
 - **Databricks Community** for outstanding documentation and support
 - **Delta Lake OSS Community** for building amazing open-source technology
 
----
 
-## 🤝 Contributing
-
-While this is a personal project for a technical assessment, suggestions and improvements are welcome!
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit changes (`git commit -am 'Add new feature'`)
-4. Push to branch (`git push origin feature/improvement`)
-5. Open a Pull Request
-
----
-
-## 📞 Support
-
-For questions or issues with this project:
-
-1. Check the [Issues](https://github.com/SteveMoodyData/TheQuest/issues) page
-2. Open a new issue with detailed description
-3. Reach out via email or LinkedIn
-
----
-
-**Last Updated**: February 2026
-
-*Built with ☕, 💻, and a passion for data engineering in Portland, Oregon*
-
----
 
 ## 📊 Project Statistics
 
