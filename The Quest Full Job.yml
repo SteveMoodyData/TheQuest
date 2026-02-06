@@ -1,0 +1,42 @@
+resources:
+  jobs:
+    The_Quest_Full_Job:
+      name: The Quest Full Job
+      tasks:
+        - task_key: Load_population_data_into_volume
+          notebook_task:
+            notebook_path: /Workspace/Users/stevemoody@gmail.com/TheQuest/api_load_file
+            source: WORKSPACE
+          environment_key: Default
+        - task_key: load_data_from_BTS_to_S3_Bucket
+          notebook_task:
+            notebook_path: /Workspace/Users/stevemoody@gmail.com/TheQuest/BLS_to_S3_loader_DBX
+            source: WORKSPACE
+          environment_key: Default
+        - task_key: autoload_BLS_data_to_bronze
+          depends_on:
+            - task_key: load_data_from_BTS_to_S3_Bucket
+          notebook_task:
+            notebook_path: /Workspace/Users/stevemoody@gmail.com/TheQuest/BLS_autoloader
+            source: WORKSPACE
+          environment_key: Default
+        - task_key: etl_pipeline_bronze_silver_gold
+          depends_on:
+            - task_key: Load_population_data_into_volume
+            - task_key: autoload_BLS_data_to_bronze
+          pipeline_task:
+            pipeline_id: 60256ba6-cadc-40e5-b1a8-c6c172151c26
+          email_notifications:
+            on_success:
+              - steve.moody@gmail.com
+            on_failure:
+              - steve.moody@gmail.com
+          notification_settings:
+            no_alert_for_skipped_runs: true
+      queue:
+        enabled: true
+      environments:
+        - environment_key: Default
+          spec:
+            environment_version: "4"
+      performance_target: PERFORMANCE_OPTIMIZED
